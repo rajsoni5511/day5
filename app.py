@@ -1,40 +1,15 @@
-# Simple To-Do List Manager in Python
+# Simple Hello World and Sum Program
 
-def display_tasks(tasks):
-    print("\nYour To-Do List:")
-    for i, (task, done) in enumerate(tasks.items(), 1):
-        status = "✓ Done" if done else "⏳ Pending"
-        print(f"{i}. {task} - {status}")
+def add(a, b):
+    return a + b
 
-def main():
-    tasks = {}
-    while True:
-        print("\nOptions: 1. Add  2. View  3. Mark Done  4. Exit")
-        choice = input("Enter your choice: ")
+print("Hello, World!")  # Greeting
 
-        if choice == '1':
-            task = input("Enter new task: ")
-            tasks[task] = False
-            print("Task added!")
+# Take input from user
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
 
-        elif choice == '2':
-            display_tasks(tasks)
+# Call add function
+result = add(num1, num2)
 
-        elif choice == '3':
-            display_tasks(tasks)
-            task_num = int(input("Enter task number to mark done: ")) - 1
-            if 0 <= task_num < len(tasks):
-                task = list(tasks.keys())[task_num]
-                tasks[task] = True
-                print("Task marked as done!")
-            else:
-                print("Invalid task number!")
-
-        elif choice == '4':
-            print("Exiting To-Do List. Goodbye!")
-            break
-        else:
-            print("Invalid choice! Try again.")
-
-if __name__ == "__main__":
-    main()
+print(f"The sum of {num1} and {num2} is: {result}")
