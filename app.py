@@ -3,7 +3,7 @@
 def add(a, b):
     return a + b
 
-print("Hello, World!")  # Greeting
+print("Hello, Dev!")  # Greeting
 
 # Take input from user
 num1 = int(input("Enter first number: "))
